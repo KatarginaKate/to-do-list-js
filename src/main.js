@@ -18,3 +18,6 @@ import { refs } from "./js/refs";
   </li>
 */
 refs.headerForm.addEventListener('submit', onHeaderFormSubmit);
+import { initTheme } from "./js/theme-switcher";
+initTheme();
+

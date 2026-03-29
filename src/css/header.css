@@ -44,3 +44,18 @@
   background-color: rgb(245, 245, 245);
   transition: all 250ms ease-in-out;
 }
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .task-list-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark button {
+  background-color: #333;
+  color: #fff;
+}

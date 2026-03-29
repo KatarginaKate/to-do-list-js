@@ -1,12 +1,17 @@
 import { refs } from "./refs";
 
 export function renderTasks(tasks) {
-  const markup = `
-            <li class="task-list-item">
-      <button class="task-list-item-btn">Delete</button>
-      <h3>${tasks.name}</h3>
-      <p>${tasks.description}</p>
-  </li>
-        `;
-  refs.tasksList.insertAdjacentHTML('beforeend', markup);
+  const markup = tasks
+    .map(
+      task => `
+<li class="task-list-item" data-id="${task.id}">
+  <button class="task-list-item-btn">Delete</button>
+  <h3>${task.name}</h3>
+  <p>${task.description}</p>
+</li>
+`
+    )
+    .join('');
+
+  refs.tasksList.innerHTML = markup; // 🔥 повний перерендер
 }
